@@ -77,3 +77,13 @@ h2{
 .message {
     font-size: 1.3rem;
 }
+
+.notes-table {
+    margin: 1rem auto;
+    width: 60vh;
+}
+
+table,th,td {
+    border: 2px var(--primary-color) solid;
+    border-collapse: collapse;
+}
