@@ -28,10 +28,9 @@ function checkBtnHandler() {
     else if (Number(inputCash.value) === Number(inputBill.value))
       notesTable.innerHTML = `<p className="message">Balance amt is 0</p>`;
     else if (Number(inputCash.value) < Number(inputBill.value)) {
-        notesTable.innerHTML =`<p className="message">You need to pay
-         ${Number(inputBill.value) - Number(inputCash.value)} Rupees more!</p>`
-    }  
-    else {
+      notesTable.innerHTML = `<p className="message">You need to pay
+         ${Number(inputBill.value) - Number(inputCash.value)} Rupees more!</p>`;
+    } else {
       let returnAmt = Number(inputCash.value) - Number(inputBill.value);
       let numberOfNotesList = [];
       let availableNotesDenomination = [200, 500, 100, 20, 10, 5, 1];
@@ -41,10 +40,9 @@ function checkBtnHandler() {
         );
         returnAmt %= availableNotesDenomination[i];
       }
-    }
-    returnAmt = Number(inputCash.value) - Number(inputBill.value);
-    notesTable.style.display = "block";
-    notesTable.innerHTML = `
+      returnAmt = Number(inputCash.value) - Number(inputBill.value);
+      notesTable.style.display = "block";
+      notesTable.innerHTML = `
         <div className="container">
             <table class="notes-table">
                 <caption>
@@ -73,5 +71,6 @@ function checkBtnHandler() {
             </table>
         </div>
         `;
+    }
   }
 }
