@@ -73,3 +73,7 @@ h2{
     font-size: 1rem;
     cursor: pointer;
 }
+
+.message {
+    font-size: 1.3rem;
+}
